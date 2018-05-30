@@ -1,4 +1,21 @@
-body {
-  
+@import "theme/reset";
 
+body {
+  font-family: sans-serif;
+}
+.page-content {
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+}
+.wrap {
+  max-width: 700px;
+}
+
+.post {
+  margin: 2em 0;
+}
+
+img {
+  max-width: 100%;
 }
