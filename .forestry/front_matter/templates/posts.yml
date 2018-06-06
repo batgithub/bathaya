@@ -12,16 +12,6 @@ fields:
   type: datetime
   hidden: false
   default: ''
-- name: categories
-  label: Categories
-  type: tag_list
-  hidden: false
-  default: ''
-- name: layout
-  label: Layout
-  type: text
-  hidden: false
-  default: ''
 - type: select
   name: categorie
   config:
@@ -35,6 +25,7 @@ fields:
     required: true
   label: Categorie
   description: ''
+  default: Article
 pages:
 - _posts/2018-06-06-test-from-forestry.md
 - _posts/2018-05-29-welcome-to-jekyll-s.md
