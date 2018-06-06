@@ -9,9 +9,7 @@ layout: ''
 
 zerzrzrezerze zrez rze zrzaraizrh izuhrzei rhziurhzi rhzrhze r
 
-![](/uploads/test.jpg)
-
-ozeijfoz efoizjef zjefzef
+![](assets/posts/test.jpg)ozeijfoz efoizjef zjefzef
 
 zerzer
 
