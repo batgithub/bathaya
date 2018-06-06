@@ -30,4 +30,5 @@ fields:
   name: color
   description: quelle couleur tu veux
 pages:
+- _posts/test-from-forestry.md
 - _posts/2018-05-29-welcome-to-jekyll-s.md
