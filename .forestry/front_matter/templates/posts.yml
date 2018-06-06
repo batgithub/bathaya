@@ -27,6 +27,7 @@ fields:
   description: ''
   default: Article
 pages:
+- _posts/bebe.md
 - _posts/2018-06-06-le-post-depuis-mon-smartphone.md
 - _posts/2018-06-06-test-from-forestry.md
 - _posts/2018-05-29-welcome-to-jekyll-s.md
