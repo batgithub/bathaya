@@ -22,13 +22,19 @@ fields:
   type: text
   hidden: false
   default: ''
-- type: color
+- type: select
+  name: categorie
   config:
-    color_format: Hex
-  default: "#F8E71C"
-  label: Color
-  name: color
-  description: quelle couleur tu veux
+    source:
+      type: simple
+    options:
+    - Article
+    - Photos
+    - graphisme
+    - code
+    required: true
+  label: Categorie
+  description: ''
 pages:
 - _posts/2018-06-06-test-from-forestry.md
 - _posts/2018-05-29-welcome-to-jekyll-s.md
