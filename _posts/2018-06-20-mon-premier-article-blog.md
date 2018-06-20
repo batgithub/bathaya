@@ -3,7 +3,7 @@ title: Mon premier article/blog
 categorie: Article
 date: 2018-06-20 00:00:00 +0000
 ---
-Je suis designer depuis 3 ans. J’ai commencé par créer du contenu et notamment par faire du graphisme. Durant tout ce temps j’ai appris à produire efficacement et à bien m’organiser pour respecter des délais parfois courts. 
+Je suis designer depuis 3 ans. J’ai commencé par créer du contenu et notamment par faire du graphisme. Durant tout ce temps j’ai appris à produire efficacement et à bien m’organiser pour respecter des délais parfois courts.
 
 Maintenant que je connais les basics que je sais réaliser des créations simples et efficaces. J’ai envie de développer mon propre style d’expression. Pour mieux porter les messages, convaincre et porter mes ambitions.
 
