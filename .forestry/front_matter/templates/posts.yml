@@ -26,3 +26,5 @@ fields:
   label: Categorie
   description: ''
   default: Article
+pages:
+- _posts/mon-premier-article-blog.md
