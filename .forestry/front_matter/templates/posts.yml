@@ -28,5 +28,4 @@ fields:
   description: ''
   default: Article
 pages:
-- _posts/new.md
 - _posts/2018-06-20-mon-premier-article-blog.md
