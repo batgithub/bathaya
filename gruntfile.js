@@ -6,8 +6,6 @@ module.exports = function(grunt){
 
 	//création des têches
 	grunt.initConfig({	//initialisation de l'ensemble des tâches
-
-
     sass: {                              // Task
         dev: {                            // Target
             files: {                         // Dictionary of files
