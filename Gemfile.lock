@@ -65,10 +65,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  eventmachine (~> 1.2, >= 1.2.7)
   jekyll (~> 3.8.2)
   jekyll-feed (~> 0.6)
   minima (~> 2.0)
   tzinfo-data
 
 BUNDLED WITH
-   1.16.2
+   1.17.1
