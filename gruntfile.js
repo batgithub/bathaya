@@ -1,38 +1,36 @@
 module.exports = function(grunt){
 
 	// load all grunt tasks matching the ['grunt-*', '@*/grunt-*'] patterns
-	//lancement de toutes les tâches sans avoir à les lister
-    require('load-grunt-tasks')(grunt);
+  require('load-grunt-tasks')(grunt);
 
-	//création des têches
+	//création des tâches
 	grunt.initConfig({	//initialisation de l'ensemble des tâches
-    sass: {                              // Task
-        dev: {                            // Target
-            files: {                         // Dictionary of files
-                'dev/style.css': 'dev/sass/style.scss'
+    //////////////////
+    // SASS
+    //////////////////
+    sass: {
+        serve: {
+            files: {
+                './assets/main.css': './sass/theme.scss'
             },
             options: {
                 update: true,
                 sourcemap: 'auto'
 
             }
-        },
-        docs: {
-            files: {
-                'docs/style.css': 'dev/sass/style.scss'
-            },
-            options: {
-                update: true,
-                sourcemap: 'none',
-                style:'nested'
-
-            }
         }
     },
+    //////////////////
+    // END SASS
+    //////////////////
+
+
+    //////////////////
+    // COPY
+    //////////////////
     copy: {
       main: {
         files: [
-          // includes files within path
           {
             expand: true,
             cwd:'dev',
@@ -43,14 +41,30 @@ module.exports = function(grunt){
         ],
       },
     },
+    //////////////////
+    // END COPY
+    //////////////////
+
+
+    //////////////////
+    // AUTOPREFIXER
+    //////////////////
     autoprefixer: {
-      docs :{
+      serve :{
           files: {
               // Target-specific file lists and/or options go here.
-              'docs/style.css':'dev/style.css',
+              './assets/main-prefix.css':'./assets/main.css',
           }
       }
     },
+    //////////////////
+    // END AUTOPREFIXER
+    //////////////////
+
+
+    //////////////////
+    // UGLIFY
+    //////////////////
     uglify: {
       dev: {
         files: {
@@ -69,53 +83,73 @@ module.exports = function(grunt){
         }
       }
     },
-    jekyll: {                             // Task
-      options: {                          // Universal options
+    //////////////////
+    // END UGLIFY
+    //////////////////
+
+
+    //////////////////
+    // JEKYLL
+    //////////////////
+    jekyll: {
+      options: {
         bundleExec: true,
-        src : '<%= app %>'
+        src : './'
       },
-      dist: {                             // Target
-        options: {                        // Target options
-          dest: '<%= dist %>',
+      dist: {
+        options: {
+          dest: './_site',
           config: '_config.yml,_config.build.yml'
         }
       },
-      serve: {                            // Another target
+      serve: {
         options: {
           serve: true,
-          dest: '.jekyll',
-          drafts: true,
-          future: true
+          dest: './_site',
+          drafts: false,
+          future: true,
+          livereload: true
         }
       }
-    }
+    },
+    //////////////////
+    // END JEKYLL
+    //////////////////
 
+
+    //////////////////
+    // WATCH
+    //////////////////
     watch: {
-       options: {
-  		        livereload: true,
+      options: {
+  		  livereload: true,
       },
-        html: {
-            files: ['**/*.html']
-        },
-        sass: {
-            files: ['dev/sass/**/*.scss'],
-            tasks: ['sass:dev'],
-            options: { spawn: false }
-        },
-        js: {
-          files: ['dev/js/**/*.js'],
-          task: ['uglify:dev']
-        },
-        grunt: {
-            files: ['gruntfile.js'],
-        }
+      html: {
+        files: ['**/*.html']
+      },
+      sass: {
+        files: ['./sass/**/*.scss'],
+        tasks: ['sass:dev','autoprefixer:serve','jekyll:serve'],
+        options: { spawn: false }
+      },
+      js: {
+        files: ['dev/js/**/*.js'],
+        task: ['uglify:dev']
+      },
+      grunt: {
+        files: ['gruntfile.js'],
+      }
     }
+    //////////////////
+    // END WATCH
+    //////////////////
 
 	});
 
 	//lanceur de tâche
 	grunt.registerTask('default', ['sass:dev','uglify:dev','watch']);
   grunt.registerTask('deploy', ['sass:docs','autoprefixer','uglify:docs','copy']);
+  grunt.registerTask('test', ['sass:serve','autoprefixer:serve','jekyll:serve','watch']);
 
 
 
