@@ -99,7 +99,7 @@ module.exports = function(grunt){
       dist: {
         options: {
           dest: './_site',
-          config: '_config.yml,_config.build.yml'
+          // config: '_config.yml,_config.build.yml'
         }
       },
       serve: {
@@ -129,7 +129,7 @@ module.exports = function(grunt){
       },
       sass: {
         files: ['./sass/**/*.scss'],
-        tasks: ['sass:dev','autoprefixer:serve','jekyll:serve'],
+        tasks: ['sass:serve','autoprefixer:serve','jekyll:dist'],
         options: { spawn: false }
       },
       js: {
@@ -149,7 +149,7 @@ module.exports = function(grunt){
 	//lanceur de tâche
 	grunt.registerTask('default', ['sass:dev','uglify:dev','watch']);
   grunt.registerTask('deploy', ['sass:docs','autoprefixer','uglify:docs','copy']);
-  grunt.registerTask('test', ['sass:serve','autoprefixer:serve','jekyll:serve','watch']);
+  grunt.registerTask('test', ['sass:serve','autoprefixer:serve','jekyll:dist','watch']);
 
 
 
