@@ -117,8 +117,12 @@ module.exports = function(grunt){
       options: {
   		  livereload: true,
       },
+      base: {
+        files: ['./_config.yml','./about.md'],
+        task: ['shell:jekyllServe']
+      }
       html: {
-        files: ['./_includes/**/*.html','./_layouts/**/*.html'],
+        files: ['./404.html','./_includes/**/*.html','./_layouts/**/*.html'],
         tasks: ['shell:jekyllServe']
       },
       sass: {
