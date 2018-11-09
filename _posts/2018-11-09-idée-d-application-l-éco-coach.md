@@ -4,8 +4,6 @@ categorie: Article
 date: 2018-11-09 08:06
 
 ---
-# Une idée d’application, l'éco coach
-
 Je cherche depuis quelque temps un nouveau projet autour de l’écologie. J’ai envie d’utiliser mon savoir faire ( le design ) et d’apprendre en expérimentant pour le bien commun. 
 
 Yuka est pour moi un exemple d’application qui rend accessible et intelligible des informations et qui donne l’opportunité à tous de faire des choix sur sa consommation. 
