@@ -31,37 +31,28 @@ module.exports = function(grunt){
             implementation: sass,
 
         }
+      },
+      build: {
+        files: {
+            './assets/main.css': './_sass/theme.scss'
+        },
+        options: {
+            sourcemap: 'undefined',
+            implementation: sass,
+            outputStyle: 'compressed'
+
+        }
       }
     },
     //////////////////
     // END SASS
     //////////////////
 
-
-    //////////////////
-    // SHELL
-    //////////////////
-    shell: {
-      jekyllBuild: {
-        command: 'jekyll build JEKYLL_ENV=dev'
-      },
-      jekyllServe: {
-        command: 'bundle exec jekyll serve',
-        options: {
-          callback: log
-        }
-      }
-    },
-    //////////////////
-    // END SHELL
-    //////////////////
-
-
     //////////////////
     // AUTOPREFIXER
     //////////////////
     autoprefixer: {
-      serve :{
+      build :{
           files: {
               // Target-specific file lists and/or options go here.
               './assets/main-prefix.css':'./assets/main.css',
@@ -77,7 +68,7 @@ module.exports = function(grunt){
     // UGLIFY
     //////////////////
     uglify: {
-      dev: {
+      serve: {
         files: {
           'dev/app.js': [
             'dev/js/test1.js',
@@ -85,7 +76,7 @@ module.exports = function(grunt){
           ]
         }
       },
-      docs: {
+      build: {
         files: {
           'docs/app.js': [
             'dev/js/test1.js',
@@ -101,6 +92,25 @@ module.exports = function(grunt){
 
 
     //////////////////
+    // SHELL
+    //////////////////
+    shell: {
+      jekyllBuild: {
+        command: 'JEKYLL_ENV=production jekyll build'
+      },
+      jekyllServe: {
+        command: 'JEKYLL_ENV=development jekyll build',
+        options: {
+          callback: log
+        }
+      }
+    },
+    //////////////////
+    // END SHELL
+    //////////////////
+
+
+    //////////////////
     // WATCH
     //////////////////
     watch: {
@@ -108,12 +118,12 @@ module.exports = function(grunt){
   		  livereload: true,
       },
       html: {
-        files: ['_include/*.html','_layout/*.html'],
-        tasks: ['shell:jekyllBuild']
+        files: ['./_includes/**/*.html','./_layouts/**/*.html'],
+        tasks: ['shell:jekyllServe']
       },
       sass: {
         files: ['./_sass/**/*.scss'],
-        tasks: ['sass:serve','autoprefixer:serve','shell:jekyllBuild'],
+        tasks: ['sass:serve','shell:jekyllServe'],
         options: { spawn: false }
       },
       js: {
@@ -132,7 +142,8 @@ module.exports = function(grunt){
 
 	//lanceur de tâche
 
-  grunt.registerTask('default', ['shell:jekyllBuild',  'watch']);
+  grunt.registerTask('default', ['shell:jekyllServe',  'watch']);
+  grunt.registerTask('build', ['sass:build','autoprefixer:build','shell:jekyllBuild']);
 
 
 
