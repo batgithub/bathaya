@@ -120,9 +120,9 @@ module.exports = function(grunt){
       base: {
         files: ['./_config.yml','./about.md'],
         task: ['shell:jekyllServe']
-      }
+      },
       html: {
-        files: ['./404.html','./_includes/**/*.html','./_layouts/**/*.html'],
+        files: ['404.html','./_includes/**/*.html','./_layouts/**/*.html'],
         tasks: ['shell:jekyllServe']
       },
       sass: {
