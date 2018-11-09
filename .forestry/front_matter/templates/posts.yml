@@ -28,5 +28,5 @@ fields:
   description: ''
   default: Article
 pages:
-- _posts/idée-d-application-l-éco-coach.md
+- _posts/2018-11-09-idée-d-application-l-éco-coach.md
 - _posts/2018-06-20-mon-premier-article-blog.md
