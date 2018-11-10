@@ -1,5 +1,6 @@
-@import "theme/reset";
-@import "theme/typo";
+@import "theme/base/mixins";
+@import "theme/base/reset";
+@import "theme/base/typo";
 
 
 .page-content {
