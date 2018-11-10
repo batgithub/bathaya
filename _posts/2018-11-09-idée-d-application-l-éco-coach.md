@@ -18,7 +18,7 @@ C’était donc ça que je voulais, faire passer les citoyens à l’action !
 
 Je souhaite vraiment accompagner les utilisateurs, en leurs permettant d’évaluer leur progression, d’aller de plus en plus loin. Ça pourrait être fait sous la forme  d’une newsletter dans laquelle je ferais état de leur progression, et proposerai du contenu, des actions qu’ils pourraient être susceptible d’aimer.
 
-J'ai nommé l'application éco coach car comme un coach on s'adapte à tous les profils, au besoins et contexte de chaque personne.
+J'ai nommé l'application éco coach car comme un coach on s'adapte à tous les profils, aux besoins et contexte de chaque personne.
 
 ## A qui vais-je m’adresser ?
 
