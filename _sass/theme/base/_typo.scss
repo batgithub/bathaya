@@ -11,20 +11,30 @@
 }
 
 $font-title: IBMPlexSans-Bold;
+$color-title: rgba(#010101, 1);
 $font-body: IBMPlexSans-Regular;
+$color-body: rgba(#010101, .9);
 $link-color: $yellow;
+$link-color-visited: #E9D3FC;
+$link-color-active: #B9D9FF;
 
 html, body {
   font-size: 11px;
   font-family: $font-body;
+  color: $color-body;
+}
+
+h1, h2, p, a, li {
+  font-style: normal;
+  letter-spacing: 0em;
 }
 
 h1 {
   font-family: $font-title;
   font-size: 2.5em;
   line-height: 3rem;
-  font-style: normal;
-  letter-spacing: 0em;
+  color: $color-title;
+
 }
 
 h2 {
@@ -32,8 +42,7 @@ h2 {
   font-family: $font-title;
   font-size: 2em;
   line-height: 1rem;
-  font-style: normal;
-  letter-spacing: 0em;
+  color: $color-title;
 }
 
 p {
@@ -41,8 +50,6 @@ p {
   font-family: $font-body;
   font-size: 1.6em;
   line-height: 2.8rem;
-  font-style: normal;
-  letter-spacing: 0em;
 }
 
 
@@ -61,19 +68,29 @@ li {
 
 a {
   text-decoration: none;
-  box-shadow:
-     inset 0 0 $link-color,
-     inset 0 -0.4em $link-color;
+  color: $color-body;
   display: inline;
   transition: .2s cubic-bezier(.02,.89,.53,.99);
 
+  &:link {
+    box-shadow:
+       inset 0 0 $link-color,
+       inset 0 -0.4em $link-color;
+  }
+  &:visited {
+    box-shadow:
+      inset 0 0 $link-color-visited,
+      inset 0 -0.4em $link-color-visited;
+  }
   &:hover {
-
     box-shadow:
        inset 0 -0.5em $link-color,
        inset 0 -1.2em $link-color;
   }
+  &:active {
+    box-shadow:
+       inset 0 -0.5em $link-color-active,
+       inset 0 -1.2em $link-color-active;
+  }
 
 }
-a:hover {}
-a:visited{}
