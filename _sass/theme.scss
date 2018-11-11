@@ -1,23 +1,11 @@
+// Import BASE style
 @import "theme/base/colors";
 @import "theme/base/mixins";
 @import "theme/base/reset";
 @import "theme/base/typo";
 
+// Import INCLUDES style
+@import "theme/includes/post";
 
-.page-content {
-  display: flex;
-  justify-content: center;
-  padding: 1em;
-
-}
-.wrap {
-  max-width: 700px;
-}
-
-.post {
-  margin: 2em 0;
-}
-
-img {
-  max-width: 100%;
-}
+// Import LAYOUT style
+@import "theme/layouts/home";

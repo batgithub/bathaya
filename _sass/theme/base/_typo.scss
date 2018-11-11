@@ -16,7 +16,7 @@ $link-color: $yellow;
 
 html, body {
   font-size: 11px;
-  font-weight: $font-body;
+  font-family: $font-body;
 }
 
 h1 {
@@ -28,10 +28,10 @@ h1 {
 }
 
 h2 {
-  margin-top: 3.5rem;
+  margin-top: 3.6rem;
   font-family: $font-title;
   font-size: 2em;
-  line-height: 0rem;
+  line-height: 1rem;
   font-style: normal;
   letter-spacing: 0em;
 }

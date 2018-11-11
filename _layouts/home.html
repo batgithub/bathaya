@@ -7,10 +7,10 @@ layout: default
     <section class="post-list">
       {%- for post in site.posts -%}
       <div class="post">
-        <h1>{{ post.title }}</h1>
-        <span>
+        <span class="post-date">
           {% assign dy = post.date | date: "%a" %}{% case dy %}{% when "Mon" %}Lundi{% when "Tue" %}Mardi{% when "Wed" %}Mercredi{% when "Thu" %}Jeudi{% when "Fri" %}Vendredi{% when "Sat" %}Samedi{% when "Sun" %}Dimanche{% else %}{{ dy }}{% endcase %} {% assign d = post.date | date: "%-d"  %}{% case d %}{% when '1' %}{{ d }}er{% else %}{{ d }}{% endcase %} {% assign m = post.date | date: "%-m" %}{% case m %}{% when '1' %}janvier{% when '2' %}février{% when '3' %}mars{% when '4' %}avril{% when '5' %}mai{% when '6' %}juin{% when '7' %}juillet{% when '8' %}août{% when '9' %}septembre{% when '10' %}octobre{% when '11' %}novembre{% when '12' %}décembre{% endcase %}
         </span>
+        <h1 class="post-title">{{ post.title }}</h1>
         {{ post.content }}
         <hr/>
       </div>
