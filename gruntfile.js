@@ -99,7 +99,7 @@ module.exports = function(grunt){
         command: 'JEKYLL_ENV=production jekyll build'
       },
       jekyllServe: {
-        command: 'JEKYLL_ENV=development jekyll build',
+        command: 'JEKYLL_ENV=development jekyll build --drafts',
         options: {
           callback: log
         }
@@ -122,7 +122,7 @@ module.exports = function(grunt){
         tasks: ['shell:jekyllServe']
       },
       html: {
-        files: ['404.html','./_includes/**/*.html','./_layouts/**/*.html','./_posts/**/*.md'],
+        files: ['404.html','./_includes/**/*.html','./_layouts/**/*.html','./_drafts/**/*md','./_posts/**/*.md'],
         tasks: ['shell:jekyllServe']
       },
       sass: {
