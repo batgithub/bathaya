@@ -6,7 +6,11 @@ date: 2018-11-11 20:17
 ---
 Je viens de découvrir [la chaîne YouTube de Matt D'Avella](https://www.youtube.com/channel/UCJ24N4O0bP7LGLBDvye7oCA "Matt D'avella"), qui parle principalement de minimalisme. 
 
-<div class="videoWrapper">   <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3kbdGHavGKg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe> </div>
+<div class="videoWrapper">  
+
+ <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3kbdGHavGKg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe> 
+
+</div>
 
 Dans cette vidéo il explique son cheminement pour arriver à se lever à 6h du matin tous les jours. Il a commencer par mettre son réveil à 6h mais au moment de se réveiller, il repoussait l’heure.
 
