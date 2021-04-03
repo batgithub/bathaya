@@ -1,7 +1,6 @@
 ---
 label: Posts
 hide_body: false
-is_partial: false
 fields:
 - name: title
   label: Title
@@ -28,7 +27,7 @@ fields:
   description: ''
   default: Article
 pages:
-- _posts/test.md
+- _posts/2018-06-20-mon-premier-article-blog.md
 - _posts/2018-11-09-idée-d-application-l-éco-coach.md
 - _posts/2018-11-11-comment-créer-une-habitude-se-lever-à-6h.md
-- _posts/2018-06-20-mon-premier-article-blog.md
+- _posts/test.md
